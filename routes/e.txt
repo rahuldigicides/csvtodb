@@ -1,0 +1,85 @@
+id,phone,state,created_at,updated_at,district,name,
+1,702333010,rajastahn,0,0,digicides,kota
+2,702333011,rajastahn,0,0,digicides,delhi
+3,702333011,rajastahn,0,,digicides,sikar
+4,702333011,rajastahn,0,0,digicides,jaipur
+
+
+
+1. Right data
+id,name,phone,state,created_at,updated_at,district
+1,virat,702333010,rajastahn,0,0,digicides
+2,sachine,702333011,rajastahn,0,0,digicides
+3,meahses,702333011,rajastahn,0,,digicides
+4,dhoni,702333011,rajastahn,0,0,digicides
+
+
+
+
+
+
+
+
+
+def csvtodatabse(df):
+  for i , row in df.iterrows():
+      userid = None if pd.isna(row.id) ==True  else row.id 
+      names=None if pd.isna(row.names) ==True  else row.names
+      phone=None if pd.isna(row.phone) ==True  else row.phone
+      state=None if pd.isna(row.state) ==True  else row.state 
+      district=None if pd.isna(row.district) ==True  else row.district
+      updated_at=None if pd.isna(row.updated_at) ==True else row.updated_at 
+      created_at=None if pd.isna(row.created_at) ==True else row.created_at
+      
+      
+      q1='INSERT INTO farmers VALUES(%s, %s, %s, %s, %s, %s, %s)'
+      q2=(userid,names,phone,state,created_at,updated_at,district)
+     
+      commondbs(q1, q2) 
+      print("row insert ")
+  return {"msg":"data succefully store"}
+
+
+# ! CSV FILE UPLOAD WITH MONGODB AND MYSQL
+@handlecsv.post("/uploadcsvmongowithsql")
+async def uploadCsvMongowithSql(csv_file : UploadFile =File(...)) :
+  mongoDb=mongoDbs() 
+  
+  try:
+    df = pd.read_csv(csv_file.file) 
+    
+    if len(df.index) >1000:
+      return {"status":"1", "msg":"File data too Large" }
+    
+    df.drop_duplicates(inplace = True)
+    df.fillna('', inplace = True)
+
+    df.rename(columns = {'name':'names',}, inplace = True)
+    dbtable=['id', 'names' ,'phone' ,'state', 'created_at', 'updated_at', 'district']
+    if set(dbtable) == set(df.columns.to_list()):
+      result=csvtodatabse(df)
+      return result
+
+    else:
+      result=csvtodatabse(df)
+      field= set(df.columns.to_list()).difference(set(dbtable))
+      extField= list(field)
+      fList=['id','created_at', 'updated_at' ]
+      fList.extend(extField)
+      df2= df[fList].copy()
+      dictData= df2.to_dict('record')
+      
+    
+      for i in list(dictData):
+        farmers = mongoDb.collection2.insert_one(i).inserted_id
+        print(farmers)
+      return {"msg":"Data Successfully Fill"}
+    
+    
+  except pd.errors.ParserError as e:
+    print(e) 
+    return {"msg" :"Row  have Exrta Field"}
+    # raise e 
+    
+
+
