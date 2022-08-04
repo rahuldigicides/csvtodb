@@ -119,9 +119,9 @@ async def uploadMySql(csv_file : UploadFile =File(...)) :
     pList=list(df[f'{lName[1]}'].values)
     df.fillna('', inplace = True)
     # pList=list(df.iloc[:, 1].values)
-    for i in range(1, len(pList)) :
-      if len(str(pList[i])) !=10:
-        return {"msg":f"{i} Row is Not Valid"}
+    # for i in range(1, len(pList)) :
+    #   if len(str(pList[i])) !=10:
+    #     return {"msg":f"{i} Row is Not Valid"}
     
      
     dup=df.duplicated(subset=[f"{lName[1]}"] ,keep='last').sum()
