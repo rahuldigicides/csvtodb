@@ -27,10 +27,10 @@ async def get_hello():
 
 
 filename="rahul"
-fieldname1= ["id","email","password","role","reporting","status","company_id","blocked","deleted","phone","name","created_at","updated_at"]
+# fieldname1= ["id","email","password","role","reporting","status","company_id","blocked","deleted","phone","name","created_at","updated_at","company"]
 
 # Write the CSV File
-def writeCsvFile(rows):
+def writeCsvFile(rows,fieldname1):
     with open(filename , 'w' , encoding='UTF8', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldname1, delimiter=',',)
         # ! Header and Rows of Csv Data 
@@ -42,8 +42,10 @@ def writeCsvFile(rows):
 def downloadCsvFile():
     q1='select * from users'
     q2=() 
-    result=commondbs(q1, q2) 
-    writeCsvFile(result)
+    result=commondbs(q1, q2)
+    fieldname=result[0].keys()
+    # print(list(heads))
+    writeCsvFile(result, list(fieldname))
     return  FileResponse(path=filename, media_type='application/octet-stream', filename="csvFile")
 
 

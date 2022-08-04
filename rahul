@@ -1,0 +1,31 @@
+id,email,password,role,reporting,status,company_id,blocked,deleted,phone,name,created_at,updated_at,company
+111,hemant.jain12@digicides.com,Hemant@2124,Owner,Senior Manager2,In Progress,C312,0,0,9924040902,Hemant,2022-07-27 10:28:14,2022-07-27 10:28:14,Super30
+12136,king@gmail.com,king,User45,Senior Manager,In Progress,C312,0,0,9674697623,king k,2022-07-27 07:54:36,2022-07-27 07:54:36,Super30
+146,456@gmail.com,uuuuuuuuuuu,Owner,Senior Manager,In Progress,haha,0,1,861729888 ,",.,..,.",2022-07-24 20:31:08,2022-07-24 20:31:08,
+16,khiladi716@gmail.com,khiladi786,user,senior manager,in progress,digicides,0,0,9674697623,khiladi k,,,
+1644,k898@gmail.com,khiladi786,user,senior manager,in progress,digicides,0,1,9674697623,khiladi k,,,
+16447,k89889@gmail.com,khiladi786,User,senior manager,In Progress,C312,0,0,9674697623,namam,2022-08-01 10:36:34,2022-08-01 10:36:34,Super30
+164471,k9@gmail.com,khiladi786,user,senior manager,in progress,digicides,0,1,9674697623,,,,
+178,ritzkewl@gmail.com,12345678,user,senior manager,in progress,digicides,0,0,9836991579,Ritoja,2022-07-05 11:37:31,2022-07-05 11:37:31,
+18,babita@gmail.com,khiladi786,user,senior manager,in progress,digicides,0,1,9674697623,khiladi k,2022-07-09 18:45:30,2022-07-09 18:45:30,
+186,mrunal@gmail.com,12345678,Owner,Senior Manager34,In Progress,C312,0,0,4566678999,Mrunal Thakur,2022-07-27 10:09:33,2022-07-27 10:09:33,Super30
+206,string,string,string,string,string,mango,0,1,string,string,2022-07-13 13:14:39,2022-07-13 13:14:39,
+217,456@gmail.comd,uuuuuuuuuuu,Owner,Senior Manager34,In Progress,C312,0,0,861729888 ,7aharaj 0inha,2022-07-27 10:12:20,2022-07-27 10:12:20,Super30
+231,king@grr.la,12345678,user,senior manager,in progress,digicides,0,0,9876534000,king,,,
+268,titam2@gmail.com,12345678,Owner,Senior Manager,In Progress,myown,0,0,7777766666,titam,2022-07-18 14:11:55,2022-07-18 14:11:55,
+296,demouser@gmail.com,12345678,Owner,Senior Manager,In Progress,Digicides2,0,0,9876654123,Demo user1,2022-07-07 15:11:28,2022-07-07 15:11:28,
+404,pinki@gmail.com,,User34,Manager,in progress,digicides,0,0,,Pinki D,2022-07-07 15:18:21,2022-07-07 15:18:21,
+45,a51@gmail.com,mango77,string,string,string,string,0,0,string,string,2022-07-12 19:25:21,2022-07-12 19:25:21,
+506,ritz@grr.la,98765432,user,senior manager,in progress,digicides,0,0,1234512345,ritz,,,
+565,qw@grr.la,,Trainee,User,in progress,digicides,0,0,,qwerty,2022-07-06 11:53:43,2022-07-06 11:53:43,
+618,w,,a,z,in progress,digicides,0,1,,q,,,
+648,titam@gmail.com,12345678,Owner,Senior Manager2,In Progress,myown,0,0,4444455555,titam,2022-07-18 14:13:21,2022-07-18 14:13:21,
+70,a5@gmail.com,mango77,user,senior manager,in progress,digicides,0,0,9674697623,khiladi k,,,
+717,a5111 gmail.com,mango77Ape@#$,Owner,Senior Manager,In Progress,Hsuzvv,0,0,7777777778,Takik,2022-07-05 14:51:53,2022-07-05 14:51:53,
+786,khiladi786@gmail.com,khiladi786,user,senior manager,subscribed,digicides,1,1,90616224555,kkm,2022-07-07 18:15:43,2022-07-07 18:15:43,
+849,"456@gmail{}:""?>.com",uuuuuuuuuuu,Owner,Senior Manager,In Progress,;';';';,0,1,861729888 ,7aharaj 0inha,2022-07-24 22:36:10,2022-07-24 22:36:10,
+856,tanujwithyou@gmail.com,12345678,Owner,Senior Manager,In Progress,HCL,0,0,8981024223,Tanuj,2022-07-05 12:54:16,2022-07-05 12:54:16,
+89,a89@gmail.com,mango77,string,string,string,string,0,0,string,string,2022-07-12 19:47:52,2022-07-12 19:47:52,
+909,pratiksha.yaduwanshi@digicides.com,21082711pY,Owner,Senior Manager,In Progress,Digicides,0,0,9670407377,Pratiksha,2022-07-06 05:23:22,2022-07-06 05:23:22,
+936,gagan@grr.la,,admin,,in progress,digicides,0,0,,gagan,,,
+u111,babita2@gmail.com,khiladi786,user,senior manager,in progress,c123,0,1,9674697623,khiladi k,2022-07-26 20:14:56,2022-07-26 20:14:56,digicides
